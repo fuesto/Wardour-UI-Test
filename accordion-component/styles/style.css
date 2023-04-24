@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #F8CE46;
+  color: #3B3738;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.outer {
+  display: block;
+  width: 94%;
+  max-width: 40em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 2em 0;
+  text-align: center;
+  font-size: clamp(1.22rem, 3.5vw, 2rem);
+}
+
+.faq {
+  box-sizing: border-box;
+}
+.faq-accordion-item {
+  text-align: left;
+  margin: 0 0 0.75em;
+  padding: 0.25em 1em;
+}
+.faq-accordion-header {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  border: none;
+  font-size: 0.7rem;
+  line-height: 1.3;
+  text-align: left;
+  color: inherit;
+  background: #FFF;
+  padding: 1.2em;
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+.faq-accordion-header h2 {
+  font-size: clamp(0.7rem, 3.5vw, 1rem);
+  padding: 0em 2.5em 0 0;
+}
+.faq-accordion-header[aria-expanded=true] {
+  background-color: #46A1DC;
+}
+.faq-accordion-header:hover, .faq-accordion-header:focus {
+  background-color: #46A1DC;
+  color: #FFF;
+  outline: none;
+}
+.faq-accordion-header::before {
+  content: "+";
+  position: absolute;
+  display: block;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 2em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #3B3738;
+  color: #3B3738;
+  text-align: center;
+  line-height: 21px;
+}
+.faq-accordion-header:hover::before {
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+.faq-accordion .x::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+.faq-accordion-content {
+  padding: 1em;
+  background: #F0F0F0;
+  font-size: clamp(0.79rem, 3.5vw, 1rem);
+  margin: 0 0 1em;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-accordion-content[aria-hidden=false] {
+  max-height: 500px;
+}/*# sourceMappingURL=style.css.map */
